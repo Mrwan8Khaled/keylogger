@@ -107,11 +107,3 @@ def update_key_display(k):
         # map the key to a nicer display name
         fixedKey = special_map.get(k_str, k_str)
         return fixedKey
-
-if __name__ == "__main__":
-    start_listener()
-    try:
-        threading.Event().wait()
-    except KeyboardInterrupt:
-        stop_listener()
-        print('Exiting.')
